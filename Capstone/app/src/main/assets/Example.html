@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Basics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .box {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+
+        .box h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .box pre {
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h2>Class Definition:</h2>
+    <pre>
+            class Person:
+                def __init__(self, name, age):
+                    self.name = name
+                    self.age = age
+
+                def greet(self):
+                    return f"Hello, my name is {self.name} and I am {self.age} years old."
+        </pre>
+
+    <h2>Instantiating Objects:</h2>
+    <pre>
+            person1 = Person("Alice", 30)
+            person2 = Person("Bob", 25)
+        </pre>
+</div>
+</body>
+</html>

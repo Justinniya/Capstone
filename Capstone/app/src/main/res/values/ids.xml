@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="Tab" type="id" />
+    <item name="OpenB" type="id" />
+    <item name="OpenS" type="id" />
+    <item name="OpenP" type="id" />
+    <item name="CLoseB" type="id" />
+    <item name="CLoseP" type="id" />
+    <item name="CLoseSS" type="id" />
+    <item name="Equals" type="id" />
+    <item name="Colon" type="id" />
+
+
+</resources>

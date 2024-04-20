@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">XCite-Learn</string>
+    <string name="Login"><b>Login</b></string>
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">XCite-Learn</string>
+    <string name="nav_header_subtitle">XCiteLearn@andriod.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_about">About</string>
+    <string name="menu_python">Python</string>
+    <string name="menu_java">Java</string>
+
+    <string name="Exp1">
+        def print_message():\n"
+            "print(\"This is a message from the function.\")\n"
+            "\n"
+            "# Call the function\n"
+            "print_message()
+    </string>
+
+    <!--<string name="Prob1">
+        <b>Fill in the blank</b>
+        <b>_____('Hello world')</b>
+    </string>-->
+
+
+    <string name="python_parag">
+        <b>What Is Python?</b> \n
+\n     \t Interpreted high-level object-oriented dynamically-typed scripting language.
+\n     \t As a result, run time errors are usually encountered.</string>
+
+    <string name="python_2vrya">
+        <b>Python Getting Started</b> \n \n
+        <b>Python Install</b> \n
+        Many PCs and Macs will have python already installed. \n
+        To check if you have python installed on a Windows PC, search in the start bar for Python or run the following on the Command Line (cmd.exe): \n \n
+        <b>C:\Users\Your Name>python --version</b>
+
+    </string>
+    <string name="Level1Python">
+        
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_oop">oop</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_python_study">pythonStudy</string>
+    <string name="title_activity_try">Try</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="title_activity_homee">Homee</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="app_names">CodeView</string>
+
+    <!-- Actions -->
+    <string name="find_and_replace">Find And Replace</string>
+    <string name="search_keyword">Search keyword</string>
+    <string name="find_previous_match">Find previous Match</string>
+    <string name="find_next_match">Find Next Match</string>
+    <string name="replacement">Replacement</string>
+    <string name="replace_all">Replace all</string>
+    <string name="clear_text">Clear Text</string>
+    <string name="comment">Comment</string>
+    <string name="uncomment">UnComment</string>
+    <string name="relative_line_number">Relative Line Number</string>
+    <string name="undo">Undo</string>
+    <string name="redo">Redo</string>
+
+    <!-- Programming Languages -->
+    <string name="languages">Languages</string>
+    <string name="java"> Java </string>
+    <string name="python"> Python </string>
+    <string name="go"> Go </string>
+
+    <!-- Themes -->
+    <string name="themes">Themes</string>
+    <string name="monokia">Monokia</string>
+    <string name="noctics_white">Noctics White</string>
+    <string name="five_color_dark">Five Color Dark</string>
+    <string name="orange_box">Orange Box</string>
+
+    <string name="source_position">%1$d:%2$d</string>
+    <string name="large_text">
+
+</string>
+    <string name="e1">
+        Understanding the fundamental building blocks of object-oriented programming, including variables, methods, and classes, is essential for creating robust and maintainable software systems.
+    </string>
+</resources>

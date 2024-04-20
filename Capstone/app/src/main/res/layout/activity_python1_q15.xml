@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient0range"
+    android:layout_height="match_parent"
+    tools:context=".Python1Q15">
+
+    <LinearLayout
+        android:background="@drawable/gradient0range"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="360dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="40dp"
+            android:layout_height="380dp"
+            android:contentDescription="Quiz"
+            >
+
+            <TextView
+                android:id="@+id/Question"
+                android:layout_width="362dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient0range"
+                android:gravity="center"
+                android:radius="10dp"
+                android:text="Alex is working on a Python program that requires concatenating two strings together without using any other string manipulation operations.\n\nstr1 = 'Hello,'\nstr2 = 'World!'\n\n
+    result =            \n\nprint (result)"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:fontFamily="monospace" />
+
+            <EditText
+                android:id="@+id/fill"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="193dp"
+                android:layout_marginTop="224dp"
+                android:color="@color/black"
+                android:hint=""
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:fontFamily="monospace" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/Submit"
+                android:layout_width="130dp"
+                android:layout_marginLeft="200dp"
+                android:layout_height="match_parent"
+                android:text="Submit" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

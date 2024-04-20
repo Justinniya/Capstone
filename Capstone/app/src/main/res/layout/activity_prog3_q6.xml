@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="PythonExpert.Prog3Q6">
+
+    <LinearLayout
+        android:background="@drawable/gradient0range"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="360dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="40dp"
+            android:layout_height="380dp"
+            android:contentDescription="Quiz">
+
+            <TextView
+                android:id="@+id/Question"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient0range"
+                android:gravity="center"
+                android:radius="10dp"
+                android:text="            are methods that are bound to the class rather than to an instance. They are defined with the @staticmethod decorator in Python."
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:fontFamily="monospace"/>
+
+            <EditText
+                android:id="@+id/fill"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="94dp"
+                android:layout_marginTop="205dp"
+                android:color="@color/black"
+                android:hint="print"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:fontFamily="monospace" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/Submit"
+                android:layout_width="130dp"
+                android:layout_marginLeft="200dp"
+                android:layout_height="match_parent"
+                android:text="Submit" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

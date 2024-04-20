@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logophone"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo5"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Capstone"
+        tools:targetApi="34">
+        <activity
+            android:name=".Example.E2example15"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E2example14"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E2example13"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E2example12"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E2example11"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E2example10"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E2example9"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E2example8"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E2example7"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E2example6"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E2example5"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E2example4"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E2example3"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E2Example1"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".Example.Others"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example15"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example14"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example13"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example12"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example11"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example10"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example9"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example1"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example8"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example7"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example6"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example5"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example4"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example3"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example2"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E1example"
+            android:exported="false" />
+        <activity
+            android:name=".Problem_Output"
+            android:exported="false" />
+        <activity
+            android:name=".Output"
+            android:exported="false" />
+        <activity
+            android:name=".Compiler"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob15"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob14"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob13"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob12"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob11"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob10"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob9"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob8"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob7"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob6"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob5"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob4"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob3"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob2"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Prob1"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q15"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q14"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q13"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q12"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q11"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q10"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q9"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q8"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q7"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q6"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q5"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q4"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q3"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q2"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Q1"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut15"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut14"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut13"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut12"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut11"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut10"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut9"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut8"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut7"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut6"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut5"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut4"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut3"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut2"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Prog3Tut1"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code15"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code14"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code13"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code12"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code11"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code10"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code9"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code8"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code7"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code6"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q15"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q14"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q13"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q12"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q11"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q10"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q9"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q8"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q7"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q6"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut15"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut14"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut13"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut12"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut11"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut10"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut9"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut8"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut7"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut6"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob15"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob14"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob13"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob12"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob11"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q15"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q14"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q13"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q12"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q11"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson15"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson14"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson13"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson12"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson11"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code5"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code4"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code3"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code2"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Code1"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q5"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q4"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q3"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q2"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Q1"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut5"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut4"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut3"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut2"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Prog2Tut1"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Pactivity3"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Pactivity2"
+            android:exported="false" />
+        <activity
+            android:name=".Test"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson10"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson9"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson8"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson7"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson6"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson5"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson4"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson3"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson2"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Lesson1"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q10"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q9"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q8"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q7"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q6"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q5"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q4"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q3"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q2"
+            android:exported="false" />
+        <activity
+            android:name=".Python1Q1"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob10"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob9"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob8"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob7"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob6"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob5"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob4"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob3"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob2"
+            android:exported="false" />
+        <activity
+            android:name=".Prog1Prob1"
+            android:exported="false" />
+        <activity
+            android:name=".LevelTut"
+            android:exported="false" />
+        <activity
+            android:name=".Settings"
+            android:exported="false" />
+        <activity
+            android:name=".JavaPractice"
+            android:exported="false" />
+        <activity
+            android:name=".PythonPractice"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".JavaOOPActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Pactivity1"
+            android:exported="false" />
+        <activity
+            android:name=".pythonStudy"
+            android:exported="false"
+            android:label="@string/title_activity_python_study"
+            android:theme="@style/Theme.Capstone.NoActionBar" />
+        <activity
+            android:name=".TodoListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HelpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PythonActivity"
+            android:exported="true" />
+        <activity
+            android:name=".JavaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PracticeActivity"
+            android:exported="true"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".RegActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="java_meaning"><b>Java</b> \n \n
+     \t   Java is a high-level, class-based,
+        object-oriented programming language that is designed
+        to have as few implementation dependencies as possible.
+    </string>
+
+    <string name="main_use_java">
+        <b>What is the main use of Java?</b> \n \n
+     \t   Java is a multi-platform, object-oriented, and network-centric language that can be used as a platform in itself. It is a fast, secure, reliable programming language for coding everything from mobile apps and enterprise software to big data applications and server-side technologies.
+
+    </string>
+
+</resources>
