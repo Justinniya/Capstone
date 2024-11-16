@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is exploring class attributes in Python by defining a Dog class with a class attribute species and instance attributes for name and age. After creating instances of Dog and modifying the class attribute, he verifies that the change affects all instances"
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

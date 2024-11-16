@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is practicing how to iterate through a list in Python. He has a list of numbers, my_list = [1, 2, 3, 4, 5], and wants to print each element of the list on a new line."
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

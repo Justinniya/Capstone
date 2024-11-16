@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is learning about abstract base classes in Python and defines a Shape class with an abstract method for calculating area. After implementing the Circle subclass that provides a specific area calculation, he creates an instance of Circle with a radius of 5"
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

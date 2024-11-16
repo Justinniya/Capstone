@@ -232,19 +232,12 @@ public class Prog2Code9 extends AppCompatActivity {
             public void onClick(View view) {
                 Python python = Python.getInstance();
                 PyObject Eout = python.getModule("script");
-                PyObject call = Eout.callAttr("main","num_rows = 3\n" +
-                        "\n" +
-                        "# Define a range for columns\n" +
-                        "num_cols = 3\n" +
-                        "\n" +
-                        "# Iterate over the rows\n" +
-                        "for i in range(num_rows):\n" +
-                        "    # Iterate over the columns\n" +
-                        "    for j in range(num_cols):\n" +
-                        "        # Calculate the element value based on the row and column\n" +
-                        "        element = i * num_cols + j + 1\n" +
-                        "        print(element)\n" +
-                        "\n");
+                PyObject call = Eout.callAttr("main","try:\n" +
+                        "    num = int(input(\"Enter a number: \"))\n" +
+                        "    result = 10 / num\n" +
+                        "    print(\"Result:\", result)\n" +
+                        "except ValueError:\n" +
+                        "    print(\"Invalid input. Please enter a valid number.\")");
                 PyObject module = python.getModule("script");
                 PyObject result = module.callAttr("main",textEditor.getText().toString());
                 String EOutput = call.toString();
@@ -252,12 +245,12 @@ public class Prog2Code9 extends AppCompatActivity {
 
 
                 if(Prob1R.equals(EOutput)) {
-                    if(ptsNumbers==2) {
+                    if(ptsNumbers==71) {
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code9.this, Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code9.this, Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
-                        PtsNumber = 3;
+                        PtsNumber = 72;
                         sql.UpdatePoints(PtsNumber, emaill);
                         intent.putExtra("outputText", compile)
                                 .putExtra("Correctt",cor);
@@ -267,7 +260,7 @@ public class Prog2Code9 extends AppCompatActivity {
 
                     }else{
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code9.this,Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code9.this,Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
                         intent.putExtra("outputText", compile)

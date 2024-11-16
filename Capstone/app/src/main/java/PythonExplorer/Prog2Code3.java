@@ -234,10 +234,8 @@ public class Prog2Code3 extends AppCompatActivity {
                 PyObject Eout = python.getModule("script");
                 PyObject call = Eout.callAttr("main","text = \"hello, world!\"\n" +
                         "\n" +
-                        "# Use the upper() method to convert the string to uppercase\n" +
                         "uppercase_text = text.upper()\n" +
                         "\n" +
-                        "# Print the uppercase string\n" +
                         "print(uppercase_text)");
                 PyObject module = python.getModule("script");
                 PyObject result = module.callAttr("main",textEditor.getText().toString());
@@ -246,12 +244,12 @@ public class Prog2Code3 extends AppCompatActivity {
 
 
                 if(Prob1R.equals(EOutput)) {
-                    if(ptsNumbers==2) {
+                    if(ptsNumbers==53) {
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code3.this, Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code3.this, Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
-                        PtsNumber = 3;
+                        PtsNumber = 54;
                         sql.UpdatePoints(PtsNumber, emaill);
                         intent.putExtra("outputText", compile)
                                 .putExtra("Correctt",cor);
@@ -261,7 +259,7 @@ public class Prog2Code3 extends AppCompatActivity {
 
                     }else{
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code3.this,Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code3.this,Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
                         intent.putExtra("outputText", compile)

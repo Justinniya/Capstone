@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.example.capstone.DBHelper;
 import com.example.capstone.Example.E1example1;
+import com.example.capstone.Example.E1example3;
 import com.example.capstone.HomeActivity;
 import com.example.capstone.Python1Q1;
 import com.example.capstone.R;
@@ -76,19 +77,18 @@ public class Prog3Tut3 extends AppCompatActivity {
             }
         });
         Button skip = findViewById(R.id.skipped);
-        if(ptsNumbers==0) {
-            skip.setEnabled(false);
-        }
-        else {
-            skip.setEnabled(true);
-            skip.setVisibility(View.GONE);
-        }
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Prog3Tut3.this,Python1Q1.class));
-                finish();
-                tts.stop();
+                if(ptsNumbers== 46) {
+                    Show();
+
+                }else {
+                    startActivity(new Intent(Prog3Tut3.this, E1example3.class));
+                    finish();
+                    tts.stop();
+                    tts.shutdown();
+                }
             }
         });
 
@@ -148,8 +148,12 @@ public class Prog3Tut3 extends AppCompatActivity {
                     });
                 }
                 else if(numbers == 5){
-                    if(ptsNumbers==42) {
+                    if(ptsNumbers== 46) {
                         Show();
+
+                    }else{
+                        startActivity(new Intent(Prog3Tut3.this, E1example3.class));
+                        finish();
                     }
                 }
             }
@@ -206,12 +210,12 @@ public class Prog3Tut3 extends AppCompatActivity {
                     });
                 }
                 else if(numbers == 5){
-                    if(ptsNumbers==42) {
+                    if(ptsNumbers== 46) {
                         Show();
 
                     }else{
-                        //startActivity(new Intent(PythonActivity.this, Python1Q1.class));
-                        Show();
+                        startActivity(new Intent(Prog3Tut3.this, E1example3.class));
+                        finish();
                     }
                 }
             }
@@ -227,7 +231,7 @@ public class Prog3Tut3 extends AppCompatActivity {
 
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                startActivity(new Intent(Prog3Tut3.this, Python1Q1.class));
+                startActivity(new Intent(Prog3Tut3.this, E1example3.class));
                 PtsNumber = 97;
                 sql.UpdatePoints(PtsNumber, emaill);
                 dialogInterface.dismiss();
@@ -238,18 +242,12 @@ public class Prog3Tut3 extends AppCompatActivity {
     }
     public void animate(float animates){
         Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
+        img.setDuration(4000);
         img.setFillAfter(true);
 
         sir_kurt.startAnimation(img);
     }
-    public void animates(float animates){
-        Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
-        img.setFillAfter(true);
 
-        sir_kurt2.startAnimation(img);
-    }
     interface Typing{
         void onAnimationComplete();
     }

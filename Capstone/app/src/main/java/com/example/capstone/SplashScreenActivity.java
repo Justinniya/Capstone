@@ -4,12 +4,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.speech.tts.TextToSpeech;
-import android.speech.tts.Voice;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.Locale;
 
 public class SplashScreenActivity extends AppCompatActivity {
     DBHelper db;

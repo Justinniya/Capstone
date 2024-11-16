@@ -234,10 +234,8 @@ public class Prog2Code5 extends AppCompatActivity {
                 PyObject Eout = python.getModule("script");
                 PyObject call = Eout.callAttr("main","text = \"Hello,World,Python\"\n" +
                         "\n" +
-                        "# Use the split() method to split the string\n" +
                         "words = text.split(\",\")\n" +
                         "\n" +
-                        "# Print the list of substrings\n" +
                         "print(words)");
                 PyObject module = python.getModule("script");
                 PyObject result = module.callAttr("main",textEditor.getText().toString());
@@ -246,12 +244,12 @@ public class Prog2Code5 extends AppCompatActivity {
 
 
                 if(Prob1R.equals(EOutput)) {
-                    if(ptsNumbers==2) {
+                    if(ptsNumbers==59) {
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code5.this, Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code5.this, Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
-                        PtsNumber = 3;
+                        PtsNumber = 60;
                         sql.UpdatePoints(PtsNumber, emaill);
                         intent.putExtra("outputText", compile)
                                 .putExtra("Correctt",cor);
@@ -261,7 +259,7 @@ public class Prog2Code5 extends AppCompatActivity {
 
                     }else{
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code5.this,Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code5.this,Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
                         intent.putExtra("outputText", compile)

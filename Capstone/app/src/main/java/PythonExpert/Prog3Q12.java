@@ -39,17 +39,17 @@ public class Prog3Q12 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String Code = answer.getText().toString();
-                if(Code.equals("print")){
+                String Code = answer.getText().toString().toLowerCase();
+                if(Code.equals("polymorphism")){
                     Toast.makeText(Prog3Q12.this, "Correct",Toast.LENGTH_LONG).show();
-                    if(ptsNumbers==1) {
-                        startActivity(new Intent(Prog3Q12.this,Prog1Prob1.class));
+                    if(ptsNumbers==124) {
+                        startActivity(new Intent(Prog3Q12.this,Prog3Prob12.class));
                         finish();
-                        PtsNumber = 2;
+                        PtsNumber = 125;
                         sql.UpdatePoints(PtsNumber, emaill);
 
                     }else{
-                        startActivity(new Intent(Prog3Q12.this,Prog1Prob1.class));
+                        startActivity(new Intent(Prog3Q12.this,Prog3Prob12.class));
                         finish();
                     }
 

@@ -29,19 +29,19 @@
                 android:radius="10dp"
                 android:text="              allows a subclass to provide a specific implementation of a method that is already provided by its superclass.
 "
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold"
                 app:fontFamily="monospace"/>
 
             <EditText
                 android:id="@+id/fill"
-                android:layout_width="55dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="94dp"
-                android:layout_marginTop="205dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="141dp"
                 android:color="@color/black"
-                android:hint="print"
+                android:hint="overriding"
                 android:inputType="text"
                 android:textColor="@color/black"
                 android:textSize="15dp"

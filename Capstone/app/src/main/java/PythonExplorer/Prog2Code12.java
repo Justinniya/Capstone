@@ -232,9 +232,10 @@ public class Prog2Code12 extends AppCompatActivity {
             public void onClick(View view) {
                 Python python = Python.getInstance();
                 PyObject Eout = python.getModule("script");
-                PyObject call = Eout.callAttr("main","num = -10\n" +
-                        "abs_num = abs(num)\n" +
-                        "print(\"Absolute value:\", abs_num)\n");
+                PyObject call = Eout.callAttr("main","def greet(name, message):\n" +
+                        "    print(f\"Hello, {name}! {message}\")\n" +
+                        "\n" +
+                        "greet(\"Alice\", \"How are you?\")");
                 PyObject module = python.getModule("script");
                 PyObject result = module.callAttr("main",textEditor.getText().toString());
                 String EOutput = call.toString();
@@ -242,12 +243,12 @@ public class Prog2Code12 extends AppCompatActivity {
 
 
                 if(Prob1R.equals(EOutput)) {
-                    if(ptsNumbers==2) {
+                    if(ptsNumbers==80) {
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code12.this, Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code12.this, Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
-                        PtsNumber = 3;
+                        PtsNumber = 81;
                         sql.UpdatePoints(PtsNumber, emaill);
                         intent.putExtra("outputText", compile)
                                 .putExtra("Correctt",cor);
@@ -257,7 +258,7 @@ public class Prog2Code12 extends AppCompatActivity {
 
                     }else{
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code12.this,Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code12.this,Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
                         intent.putExtra("outputText", compile)

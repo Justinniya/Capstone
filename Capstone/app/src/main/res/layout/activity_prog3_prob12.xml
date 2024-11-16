@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is implementing polymorphism in Python by creating an abstract Animal class with a method that must be defined in its subclasses. After defining Dog and Cat classes that implement the speak method, he creates instances of each and uses a function to call their respective speak methods"
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

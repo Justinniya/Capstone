@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is exploring nested classes in Python and defines an Outer class that contains a nested Inner class. After creating an instance of Outer, he accesses its attributes and methods, as well as those of the nested Inner class"
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

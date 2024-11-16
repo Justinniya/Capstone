@@ -41,16 +41,16 @@ public class Prog3Q1 extends AppCompatActivity {
             public void onClick(View view) {
 
                 String Code = answer.getText().toString();
-                if(Code.equals("print")){
+                if(Code.equals("classes")){
                     Toast.makeText(Prog3Q1.this, "Correct",Toast.LENGTH_LONG).show();
-                    if(ptsNumbers==1) {
-                        startActivity(new Intent(Prog3Q1.this,Prog1Prob1.class));
+                    if(ptsNumbers==91) {
+                        startActivity(new Intent(Prog3Q1.this,Prog3Prob1.class));
                         finish();
-                        PtsNumber = 2;
+                        PtsNumber = 92;
                         sql.UpdatePoints(PtsNumber, emaill);
 
                     }else{
-                        startActivity(new Intent(Prog3Q1.this,Prog1Prob1.class));
+                        startActivity(new Intent(Prog3Q1.this,Prog3Prob1.class));
                         finish();
                     }
 
@@ -80,7 +80,7 @@ public class Prog3Q1 extends AppCompatActivity {
         build.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                startActivity(new Intent(Prog3Q1.this, Python1Lesson1.class));
+                startActivity(new Intent(Prog3Q1.this, Prog3Tut1.class));
                 finish();
                 dialogInterface.dismiss();
             }

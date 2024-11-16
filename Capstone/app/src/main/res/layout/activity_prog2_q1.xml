@@ -40,7 +40,7 @@
                 android:layout_marginLeft="66dp"
                 android:layout_marginTop="116dp"
                 android:color="@color/white"
-                android:hint="function"
+                android:hint="        "
                 android:inputType="text"
                 android:textColor="@color/white"
                 android:textSize="20sp"

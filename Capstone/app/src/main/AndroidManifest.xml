@@ -13,7 +13,20 @@
         android:roundIcon="@drawable/logo5"
         android:supportsRtl="true"
         android:theme="@style/Theme.Capstone"
+        android:usesCleartextTraffic="true"
         tools:targetApi="34">
+        <activity
+            android:name=".Try"
+            android:exported="false" />
+        <activity
+            android:name=".About_us"
+            android:exported="false" />
+        <activity
+            android:name="PythonExplorer.Problem_Output2"
+            android:exported="false" />
+        <activity
+            android:name="PythonExpert.Problem_Output3"
+            android:exported="false" />
         <activity
             android:name=".Example.E2example15"
             android:exported="false" />
@@ -56,10 +69,6 @@
         <activity
             android:name=".Example.E2Example1"
             android:exported="false" />
-        <activity
-            android:name=".SettingsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_settings" />
         <activity
             android:name=".Example.Others"
             android:exported="false" />
@@ -442,9 +451,6 @@
             android:name="PythonExplorer.Pactivity2"
             android:exported="false" />
         <activity
-            android:name=".Test"
-            android:exported="false" />
-        <activity
             android:name=".Python1Lesson10"
             android:exported="false" />
         <activity
@@ -535,13 +541,7 @@
             android:name=".Prog1Prob1"
             android:exported="false" />
         <activity
-            android:name=".LevelTut"
-            android:exported="false" />
-        <activity
             android:name=".Settings"
-            android:exported="false" />
-        <activity
-            android:name=".JavaPractice"
             android:exported="false" />
         <activity
             android:name=".PythonPractice"
@@ -550,45 +550,13 @@
             android:name=".HomeActivity"
             android:exported="true" />
         <activity
-            android:name=".JavaOOPActivity"
-            android:exported="true" />
-        <activity
             android:name=".Pactivity1"
             android:exported="false" />
-        <activity
-            android:name=".pythonStudy"
-            android:exported="false"
-            android:label="@string/title_activity_python_study"
-            android:theme="@style/Theme.Capstone.NoActionBar" />
-        <activity
-            android:name=".TodoListActivity"
-            android:exported="true" />
         <activity
             android:name=".HelpActivity"
             android:exported="true" />
         <activity
             android:name=".PythonActivity"
-            android:exported="true" />
-        <activity
-            android:name=".JavaActivity"
-            android:exported="true" />
-        <activity
-            android:name=".PracticeActivity"
-            android:exported="true"
-            android:parentActivityName=".HomeActivity" />
-        <activity
-            android:name=".ProfileActivity"
-            android:exported="true" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".RegActivity"
-            android:exported="true"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".SplashScreenActivity"

@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is learning about string manipulation in Python. He has a string, hello, world!', and wants to convert it to uppercase. To achieve this, Alex uses the upper() method, which converts all the characters in the string to uppercase."
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

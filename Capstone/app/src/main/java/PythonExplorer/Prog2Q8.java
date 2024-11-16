@@ -41,16 +41,16 @@ public class Prog2Q8 extends AppCompatActivity {
             public void onClick(View view) {
 
                 String Code = answer.getText().toString();
-                if(Code.equals("print")){
+                if(Code.equals("nested for loop")){
                     Toast.makeText(Prog2Q8.this, "Correct",Toast.LENGTH_LONG).show();
                     if(ptsNumbers==67) {
-                        startActivity(new Intent(Prog2Q8.this,Prog1Prob1.class));
+                        startActivity(new Intent(Prog2Q8.this,Prog2Code8.class));
                         finish();
                         PtsNumber = 68;
                         sql.UpdatePoints(PtsNumber, emaill);
 
                     }else{
-                        startActivity(new Intent(Prog2Q8.this,Prog1Prob1.class));
+                        startActivity(new Intent(Prog2Q8.this,Prog2Code8.class));
                         finish();
                     }
 
@@ -80,7 +80,7 @@ public class Prog2Q8 extends AppCompatActivity {
         build.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                startActivity(new Intent(Prog2Q8.this, Python1Lesson1.class));
+                startActivity(new Intent(Prog2Q8.this, Prog2Tut8.class));
                 finish();
                 dialogInterface.dismiss();
             }

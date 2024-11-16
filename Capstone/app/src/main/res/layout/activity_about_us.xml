@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About_us"
+    android:padding="16dp"
+    android:background="@drawable/gradient0range">
+
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+
+                android:id="@+id/toolbar"
+                android:layout_width="401dp"
+                android:layout_height="50dp"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.866"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="Back" />
+
+            <ImageView
+                android:id="@+id/app"
+                android:layout_width="match_parent"
+                android:layout_height="317dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logoback" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/about_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome to our Xcite Learning app! This interactive platform is designed to help you learn Python from the ground up, making programming accessible and enjoyable."
+                android:textSize="18sp"
+
+                android:padding="16dp"
+                android:textColor="@color/white"
+                android:lineSpacingExtra="6dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Created as part of our capstone project by Justin De La Vega and Kenneth Jales, our goal is to provide a comprehensive learning experience with well-structured lessons and real-world examples."
+                android:textSize="18sp"
+
+                android:padding="16dp"
+                android:textColor="@color/white"
+                android:lineSpacingExtra="6dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We believe that learning should be fun and engaging. Each feature of this app has been crafted with care to ensure that users can easily navigate through the complexities of Python programming."
+                android:textSize="18sp"
+
+                android:padding="16dp"
+                android:textColor="@color/white"
+                android:lineSpacingExtra="6dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thank you for being a part of our journey as we continue to enhance this educational platform. Happy coding!"
+                android:textSize="18sp"
+
+                android:padding="16dp"
+                android:textColor="@color/white"
+                android:lineSpacingExtra="6dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="                             Contact us"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:lineSpacingExtra="6dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center">
+
+
+                <ImageView
+                    android:id="@+id/facebook_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/facebook"
+                    android:onClick="openFacebook"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Facebook" />
+
+                <ImageView
+                    android:id="@+id/github"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/github"
+                    android:onClick="openGithub"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="GitHub" />
+
+                <ImageView
+                    android:id="@+id/instagram_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/instagram"
+                    android:onClick="openInstagram"
+                    android:contentDescription="Instagram" />
+            </LinearLayout>
+        </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

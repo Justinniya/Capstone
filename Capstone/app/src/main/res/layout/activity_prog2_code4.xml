@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is practicing string manipulation and needs to replace a specific word in a string. He has the string 'Hello, World!' and wants to replace the word 'World' with 'Python'. To do this, Alex uses the replace() method."
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

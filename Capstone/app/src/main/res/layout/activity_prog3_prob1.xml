@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="    Alex is learning about object-oriented programming in Python and wants to create a class to represent a person. He defines a class called Person that includes attributes for the person's name and age, along with a method to greet the person. The greeting message will specifically say, 'Hello, my name is {self.name} and I am {self.age} years old.'"
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

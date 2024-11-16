@@ -28,22 +28,22 @@
                 android:gravity="center"
                 android:radius="10dp"
                 android:text="            are methods that are bound to the class rather than to an instance. They are defined with the @staticmethod decorator in Python."
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold"
                 app:fontFamily="monospace"/>
 
             <EditText
                 android:id="@+id/fill"
-                android:layout_width="55dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="94dp"
-                android:layout_marginTop="205dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="145dp"
                 android:color="@color/black"
-                android:hint="print"
+                android:hint="static methods"
                 android:inputType="text"
                 android:textColor="@color/black"
-                android:textSize="15dp"
+                android:textSize="14dp"
                 android:textStyle="bold"
                 app:fontFamily="monospace" />
 

@@ -232,15 +232,9 @@ public class Prog2Code11 extends AppCompatActivity {
             public void onClick(View view) {
                 Python python = Python.getInstance();
                 PyObject Eout = python.getModule("script");
-                PyObject call = Eout.callAttr("main","import datetime\n" +
-                        "\n" +
-                        "# Get the current date and time\n" +
-                        "now = datetime.datetime.now()\n" +
-                        "print(\"Current date and time:\", now)\n" +
-                        "\n" +
-                        "# Format the current date and time\n" +
-                        "formatted_now = now.strftime(\"%Y-%m-%d %H:%M:%S\")\n" +
-                        "print(\"Formatted date and time:\", formatted_now)");
+                PyObject call = Eout.callAttr("main","num = -10\n" +
+                        "abs_num = abs(num)\n" +
+                        "print(\"Absolute value:\", abs_num)");
                 PyObject module = python.getModule("script");
                 PyObject result = module.callAttr("main",textEditor.getText().toString());
                 String EOutput = call.toString();
@@ -248,12 +242,12 @@ public class Prog2Code11 extends AppCompatActivity {
 
 
                 if(Prob1R.equals(EOutput)) {
-                    if(ptsNumbers==2) {
+                    if(ptsNumbers==77) {
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code11.this, Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code11.this, Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
-                        PtsNumber = 3;
+                        PtsNumber = 78;
                         sql.UpdatePoints(PtsNumber, emaill);
                         intent.putExtra("outputText", compile)
                                 .putExtra("Correctt",cor);
@@ -263,7 +257,7 @@ public class Prog2Code11 extends AppCompatActivity {
 
                     }else{
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code11.this,Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code11.this,Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
                         intent.putExtra("outputText", compile)

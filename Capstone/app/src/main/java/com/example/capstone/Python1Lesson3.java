@@ -53,9 +53,16 @@ public class Python1Lesson3 extends AppCompatActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Python1Lesson3.this,Python1Q3.class));
-                finish();
-                tts.stop();
+                if(OldPtsNumber==6) {
+                    Show();
+                }
+                else{
+                    startActivity(new Intent(Python1Lesson3.this, Python1Q3.class));
+                    finish();
+                    tts.stop();
+                    tts.shutdown();
+                }
+
             }
         });
         firsts = ("Data casting, or type casting, involves converting a variable from one data type to another.");
@@ -224,18 +231,12 @@ public class Python1Lesson3 extends AppCompatActivity {
     }
     public void animate(float animates){
         Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
+        img.setDuration(4000);
         img.setFillAfter(true);
 
         sir_kurt.startAnimation(img);
     }
-    public void animates(float animates){
-        Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
-        img.setFillAfter(true);
 
-        sir_kurt2.startAnimation(img);
-    }
     interface Typing{
         void onAnimationComplete();
     }
@@ -322,6 +323,7 @@ public class Python1Lesson3 extends AppCompatActivity {
     public void onBackPressed() {
         startActivity(new Intent(Python1Lesson3.this,Pactivity1.class));
         finish();
+        tts.shutdown();
         tts.stop();
     }
 }

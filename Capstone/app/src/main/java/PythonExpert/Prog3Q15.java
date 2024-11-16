@@ -41,16 +41,16 @@ public class Prog3Q15 extends AppCompatActivity {
             public void onClick(View view) {
 
                 String Code = answer.getText().toString();
-                if(Code.equals("print")){
+                if(Code.equals("property decorators")){
                     Toast.makeText(Prog3Q15.this, "Correct",Toast.LENGTH_LONG).show();
-                    if(ptsNumbers==1) {
-                        startActivity(new Intent(Prog3Q15.this,Prog1Prob1.class));
+                    if(ptsNumbers==133) {
+                        startActivity(new Intent(Prog3Q15.this,Prog3Prob15.class));
                         finish();
-                        PtsNumber = 2;
+                        PtsNumber = 134;
                         sql.UpdatePoints(PtsNumber, emaill);
 
                     }else{
-                        startActivity(new Intent(Prog3Q15.this,Prog1Prob1.class));
+                        startActivity(new Intent(Prog3Q15.this,Prog3Prob15.class));
                         finish();
                     }
 

@@ -232,13 +232,16 @@ public class Prog2Code13 extends AppCompatActivity {
             public void onClick(View view) {
                 Python python = Python.getInstance();
                 PyObject Eout = python.getModule("script");
-                PyObject call = Eout.callAttr("main","def greet(name, message):\n" +
-                        "    \"\"\"Prints a greeting message.\"\"\"\n" +
-                        "    print(f\"Hello, {name}! {message}\")\n" +
+                PyObject call = Eout.callAttr("main","x = 10\n" +
                         "\n" +
-                        "# Call the function with arguments\n" +
-                        "greet(\"Alice\", \"How are you?\")\n" +
-                        "greet(\"Bob\", \"Nice to meet you!\")\n");
+                        "if x > 5:\n" +
+                        "    print(\"x is greater than 5\")\n" +
+                        "    if x > 7:\n" +
+                        "        print(\"x is also greater than 7\")\n" +
+                        "    else:\n" +
+                        "        print(\"x is not greater than 7\")\n" +
+                        "else:\n" +
+                        "    print(\"x is not greater than 5\")");
                 PyObject module = python.getModule("script");
                 PyObject result = module.callAttr("main",textEditor.getText().toString());
                 String EOutput = call.toString();
@@ -246,12 +249,12 @@ public class Prog2Code13 extends AppCompatActivity {
 
 
                 if(Prob1R.equals(EOutput)) {
-                    if(ptsNumbers==2) {
+                    if(ptsNumbers==83) {
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code13.this, Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code13.this, Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
-                        PtsNumber = 3;
+                        PtsNumber = 84;
                         sql.UpdatePoints(PtsNumber, emaill);
                         intent.putExtra("outputText", compile)
                                 .putExtra("Correctt",cor);
@@ -261,7 +264,7 @@ public class Prog2Code13 extends AppCompatActivity {
 
                     }else{
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code13.this,Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code13.this,Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
                         intent.putExtra("outputText", compile)

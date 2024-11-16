@@ -19,6 +19,7 @@ import com.github.chrisbanes.photoview.PhotoView;
 import java.util.Locale;
 import java.util.Set;
 
+import PythonExpert.Prog3Q13;
 import PythonExplorer.Prog2Q1;
 import PythonExplorer.Prog2Q13;
 
@@ -61,7 +62,7 @@ public class E1example13 extends AppCompatActivity {
 
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(E1example13.this, Prog2Q13.class));
+                        startActivity(new Intent(E1example13.this, Prog3Q13.class));
                         finish();
                         dialogInterface.dismiss();
                     }

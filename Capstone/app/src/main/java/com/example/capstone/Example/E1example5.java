@@ -21,6 +21,7 @@ import java.util.Locale;
 import java.util.Set;
 
 import PythonExpert.Prog3Q1;
+import PythonExpert.Prog3Q5;
 import PythonExplorer.Prog2Q1;
 import PythonExplorer.Prog2Q5;
 
@@ -63,7 +64,7 @@ public class E1example5 extends AppCompatActivity {
 
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(E1example5.this, Prog2Q5.class));
+                        startActivity(new Intent(E1example5.this, Prog3Q5.class));
                         finish();
                         dialogInterface.dismiss();
                     }

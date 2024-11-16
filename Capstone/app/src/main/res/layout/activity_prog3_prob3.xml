@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex creates a Person class with attributes for name and age, along with a method that returns, 'Hello, my name is {self.name} and I am {self.age} years old.' After instantiating Person with 'Alice' and age 30,"
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

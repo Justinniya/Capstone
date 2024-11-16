@@ -27,7 +27,7 @@
                 android:background="@drawable/gradient0range"
                 android:gravity="center"
                 android:radius="10dp"
-                android:text="             handling involves working with dates, times, and timedeltas. Python has a datetime module that provides classes for working with dates and times.
+                android:text="                handling involves working with dates, times, and timedeltas. Python has a datetime module that provides classes for working with dates and times.
 "
                 android:textColor="@color/white"
                 android:textSize="15dp"
@@ -38,10 +38,10 @@
                 android:id="@+id/fill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="94dp"
-                android:layout_marginTop="205dp"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="133dp"
                 android:color="@color/white"
-                android:hint="print"
+                android:hint="              "
                 android:inputType="text"
                 android:textColor="@color/white"
                 android:textSize="15dp"

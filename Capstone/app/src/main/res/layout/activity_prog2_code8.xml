@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is learning about nested loops in Python and wants to create a grid of numbers. He decides to define a grid with 3 rows and 3 columns. For each element in the grid, he wants to calculate its value based on its position."
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

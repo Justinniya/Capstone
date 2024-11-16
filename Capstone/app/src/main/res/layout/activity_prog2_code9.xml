@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is learning about error handling in Python and wants to create a program that divides 10 by a user-provided number. He knows that if the user enters a non-numeric value or zero, it could cause an error, so he decides to use a try and except block to manage these exceptions gracefully."
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

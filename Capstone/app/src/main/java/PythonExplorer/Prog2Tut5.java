@@ -21,6 +21,7 @@ import com.example.capstone.DBHelper;
 import com.example.capstone.Example.E1example1;
 import com.example.capstone.Example.E1example3;
 import com.example.capstone.Example.E1example5;
+import com.example.capstone.Example.E2example2;
 import com.example.capstone.Example.E2example5;
 import com.example.capstone.HomeActivity;
 import com.example.capstone.Python1Lesson1;
@@ -80,19 +81,20 @@ public class Prog2Tut5 extends AppCompatActivity {
             }
         });
         Button skip = findViewById(R.id.skipped);
-        if(ptsNumbers==0) {
-            skip.setEnabled(false);
-        }
-        else {
-            skip.setEnabled(true);
-            skip.setVisibility(View.GONE);
-        }
+        skip.setEnabled(true);
+        skip.setVisibility(View.VISIBLE);
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Prog2Tut5.this,Python1Q1.class));
-                finish();
-                tts.stop();
+                if(ptsNumbers==57) {
+                    Show();
+                }
+                else {
+                    startActivity(new Intent(Prog2Tut5.this, E2example5.class));
+                    finish();
+                    tts.stop();
+                    tts.shutdown();
+                }
             }
         });
 
@@ -233,18 +235,12 @@ public class Prog2Tut5 extends AppCompatActivity {
     }
     public void animate(float animates){
         Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
+        img.setDuration( 4000);
         img.setFillAfter(true);
 
         sir_kurt.startAnimation(img);
     }
-    public void animates(float animates){
-        Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
-        img.setFillAfter(true);
 
-        sir_kurt2.startAnimation(img);
-    }
     interface Typing{
         void onAnimationComplete();
     }

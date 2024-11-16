@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is learning about string methods and needs to split a string into separate words. He has the string 'Hello,World,Python', where the words are separated by commas. To break the string into individual words, Alex uses the split() method with a comma as the delimiter."
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

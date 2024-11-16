@@ -83,9 +83,14 @@ public class Prog3Tut2 extends AppCompatActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Prog3Tut2.this,Python1Q1.class));
-                finish();
-                tts.stop();
+                if(ptsNumbers==93) {
+                    Show();
+                }else {
+                    startActivity(new Intent(Prog3Tut2.this, E1example2.class));
+                    finish();
+                    tts.stop();
+                    tts.shutdown();
+                }
             }
         });
 
@@ -152,9 +157,9 @@ public class Prog3Tut2 extends AppCompatActivity {
                     });
                 }
                 else if(numbers == 5){
-                    if(ptsNumbers==90) {
+                    if(ptsNumbers==93) {
                         Show();
-                    }else{
+                    }else {
                         startActivity(new Intent(Prog3Tut2.this, E1example2.class));
                         finish();
                     }
@@ -220,9 +225,9 @@ public class Prog3Tut2 extends AppCompatActivity {
                     });
                 }
                 else if(numbers == 5){
-                    if(ptsNumbers==90) {
+                    if(ptsNumbers==93) {
                         Show();
-                    }else{
+                    }else {
                         startActivity(new Intent(Prog3Tut2.this, E1example2.class));
                         finish();
                     }
@@ -240,7 +245,7 @@ public class Prog3Tut2 extends AppCompatActivity {
 
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                startActivity(new Intent(Prog3Tut2.this, Python1Q1.class));
+                startActivity(new Intent(Prog3Tut2.this, E1example2.class));
                 finish();
                 PtsNumber = 94;
                 sql.UpdatePoints(PtsNumber, emaill);
@@ -252,18 +257,12 @@ public class Prog3Tut2 extends AppCompatActivity {
     }
     public void animate(float animates){
         Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
+        img.setDuration( 4000);
         img.setFillAfter(true);
 
         sir_kurt.startAnimation(img);
     }
-    public void animates(float animates){
-        Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
-        img.setFillAfter(true);
 
-        sir_kurt2.startAnimation(img);
-    }
     interface Typing{
         void onAnimationComplete();
     }

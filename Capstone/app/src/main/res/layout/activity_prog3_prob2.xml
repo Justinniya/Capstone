@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is learning about class and instance variables in Python and wants to create a class to represent a car. He defines a class called Car that includes a class variable for the number of wheels and instance variables for the car's make and model. The class also includes a method to display the car's information, specifically stating, 'This car is a {self.make} {self.model} with {Car.wheels} wheels.'"
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

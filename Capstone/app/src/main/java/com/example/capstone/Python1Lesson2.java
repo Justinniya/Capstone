@@ -1,8 +1,5 @@
 package com.example.capstone;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -17,6 +14,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 import java.util.Set;
@@ -79,6 +79,7 @@ public class Python1Lesson2 extends AppCompatActivity {
                 }else {
                     startActivity(new Intent(Python1Lesson2.this, Python1Q2.class));
                     finish();
+                    tts.shutdown();
                 }
             }
         });
@@ -244,18 +245,12 @@ public class Python1Lesson2 extends AppCompatActivity {
     }
     public void animate(float animates){
         Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
+        img.setDuration(4000);
         img.setFillAfter(true);
 
         sir_kurt.startAnimation(img);
     }
-    public void animates(float animates){
-        Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
-        img.setFillAfter(true);
 
-        sir_kurt2.startAnimation(img);
-    }
     interface Typing{
         void onAnimationComplete();
     }
@@ -346,6 +341,8 @@ public class Python1Lesson2 extends AppCompatActivity {
         startActivity(new Intent(Python1Lesson2.this,Pactivity1.class));
         finish();
         tts.stop();
+        tts.shutdown();
+
     }
     @Override
     protected void onDestroy() {

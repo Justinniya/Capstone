@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.capstone"
-        minSdk 21
+        minSdk 30
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -22,10 +22,14 @@ android {
         }
         python {
             version "3.11"
+            pip{
+                install "flask"
+            }
         }
         python {
             buildPython "C://Users//Acer//AppData//Local//Programs//Python//Python311//python.exe"
         }
+
     }
 
     buildTypes {
@@ -63,6 +67,10 @@ dependencies {
     implementation('com.github.chrisbanes:PhotoView:2.3.0')
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation ('com.squareup.retrofit2:retrofit:2.9.0')
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation ('com.squareup.retrofit2:converter-gson:2.9.0')
+    implementation ('com.squareup.okhttp3:okhttp:4.9.1')
 
 
 

@@ -235,10 +235,8 @@ public class Prog2Code2 extends AppCompatActivity {
                 PyObject call = Eout.callAttr("main","def get_message():\n" +
                         "    return \"This is a message from the function.\"\n" +
                         "\n" +
-                        "# Call the function and store the returned value\n" +
                         "message = get_message()\n" +
                         "\n" +
-                        "# Print the returned value\n" +
                         "print(message)");
                 PyObject module = python.getModule("script");
                 PyObject result = module.callAttr("main",textEditor.getText().toString());
@@ -249,7 +247,7 @@ public class Prog2Code2 extends AppCompatActivity {
                 if(Prob1R.equals(EOutput)) {
                     if(ptsNumbers==2) {
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code2.this, Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code2.this, Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
                         PtsNumber = 3;
@@ -262,7 +260,7 @@ public class Prog2Code2 extends AppCompatActivity {
 
                     }else{
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code2.this,Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code2.this,Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
                         intent.putExtra("outputText", compile)

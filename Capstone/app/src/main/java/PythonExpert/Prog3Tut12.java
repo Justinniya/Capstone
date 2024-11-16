@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.capstone.DBHelper;
 import com.example.capstone.Example.E1example1;
+import com.example.capstone.Example.E1example12;
 import com.example.capstone.HomeActivity;
 import com.example.capstone.Python1Q1;
 import com.example.capstone.R;
@@ -74,19 +75,18 @@ public class Prog3Tut12 extends AppCompatActivity {
             }
         });
         Button skip = findViewById(R.id.skipped);
-        if(ptsNumbers==0) {
-            skip.setEnabled(false);
-        }
-        else {
-            skip.setEnabled(true);
-            skip.setVisibility(View.GONE);
-        }
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Prog3Tut12.this,Python1Q1.class));
-                finish();
-                tts.stop();
+                if(ptsNumbers== 123) {
+                    Show();
+
+                }else {
+                    startActivity(new Intent(Prog3Tut12.this, E1example12.class));
+                    finish();
+                    tts.stop();
+                    tts.shutdown();
+                }
             }
         });
 
@@ -136,18 +136,12 @@ public class Prog3Tut12 extends AppCompatActivity {
 
                 }
                 else if(numbers == 4) {
-                    tts.speak(fourth, TextToSpeech.QUEUE_FLUSH, null);
-                    linear.setEnabled(false);
-                    textView.setEnabled(false);
-                    Fourth(() -> {
-                        linear.setEnabled(true);
-                        textView.setEnabled(true);
-                        numbers = 5;
-                    });
-                }
-                else if(numbers == 5){
-                    if(ptsNumbers==42) {
+                    if(ptsNumbers== 123) {
                         Show();
+                    }
+                    else {
+                        startActivity(new Intent(Prog3Tut12.this, E1example12.class));
+                        finish();
                     }
                 }
             }
@@ -194,22 +188,12 @@ public class Prog3Tut12 extends AppCompatActivity {
 
                 }
                 else if(numbers == 4) {
-                    tts.speak(fourth, TextToSpeech.QUEUE_FLUSH, null);
-                    linear.setEnabled(false);
-                    textView.setEnabled(false);
-                    Fourth(() -> {
-                        linear.setEnabled(true);
-                        textView.setEnabled(true);
-                        numbers = 5;
-                    });
-                }
-                else if(numbers == 5){
-                    if(ptsNumbers==42) {
+                    if(ptsNumbers== 123) {
                         Show();
 
                     }else{
-                        //startActivity(new Intent(PythonActivity.this, Python1Q1.class));
-                        Show();
+                        startActivity(new Intent(Prog3Tut12.this, E1example12.class));
+                        finish();
                     }
                 }
             }
@@ -236,18 +220,12 @@ public class Prog3Tut12 extends AppCompatActivity {
     }
     public void animate(float animates){
         Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
+        img.setDuration(4000);
         img.setFillAfter(true);
 
         sir_kurt.startAnimation(img);
     }
-    public void animates(float animates){
-        Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
-        img.setFillAfter(true);
 
-        sir_kurt2.startAnimation(img);
-    }
     interface Typing{
         void onAnimationComplete();
     }

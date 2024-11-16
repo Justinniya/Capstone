@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is learning about functions in Python and wants to understand how to find the absolute value of a number. He decides to test the abs() function, which returns the absolute value of a given number, regardless of its sign."
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

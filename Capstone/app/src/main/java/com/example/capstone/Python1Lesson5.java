@@ -57,9 +57,14 @@ public class Python1Lesson5 extends AppCompatActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Python1Lesson5.this,Python1Q5.class));
-                finish();
-                tts.stop();
+                if (newptsNumbers == 12) {
+                    Show();
+                } else {
+                    startActivity(new Intent(Python1Lesson5.this, Python1Q5.class));
+                    finish();
+                    tts.stop();
+                    tts.shutdown();
+                }
             }
         });
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
@@ -245,18 +250,12 @@ public class Python1Lesson5 extends AppCompatActivity {
     }
     public void animate(float animates){
         Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
+        img.setDuration(4000);
         img.setFillAfter(true);
 
         sir_kurt.startAnimation(img);
     }
-    public void animates(float animates){
-        Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
-        img.setFillAfter(true);
 
-        sir_kurt2.startAnimation(img);
-    }
     interface Typing{
         void onAnimationComplete();
     }
@@ -343,5 +342,6 @@ public class Python1Lesson5 extends AppCompatActivity {
         startActivity(new Intent(Python1Lesson5.this,Pactivity1.class));
         finish();
         tts.stop();
+        tts.shutdown();
     }
 }

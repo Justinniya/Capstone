@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex needs to create a utility for basic math operations, so he defines a MathOperations class with static methods for adding and multiplying numbers. By calling the methods with 2 and 3"
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

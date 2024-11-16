@@ -1,9 +1,5 @@
 package PythonExpert;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
@@ -18,13 +14,16 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.chaquo.python.PyObject;
 import com.chaquo.python.Python;
 import com.chaquo.python.android.AndroidPlatform;
 import com.example.capstone.DBHelper;
 import com.example.capstone.Pactivity1;
 import com.example.capstone.Problem_Output;
-import com.example.capstone.Prog1Prob1;
 import com.example.capstone.R;
 
 import java.util.regex.Matcher;
@@ -248,12 +247,12 @@ public class Prog3Prob1 extends AppCompatActivity {
 
 
                 if(Prob1R.equals(EOutput)) {
-                    if(ptsNumbers==2) {
+                    if(ptsNumbers==92) {
                         String compile = compileInput(Prob1R);
                         Intent intent = new Intent(Prog3Prob1.this, Problem_Output.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
-                        PtsNumber = 3;
+                        PtsNumber = 93;
                         sql.UpdatePoints(PtsNumber, emaill);
                         intent.putExtra("outputText", compile)
                                 .putExtra("Correctt",cor);

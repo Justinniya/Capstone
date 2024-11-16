@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is exploring multiple inheritance in Python, so he defines a base class A with a method and another base class B with a different method. After creating a derived class C that inherits from both A and B, he instantiates C and calls its methods"
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

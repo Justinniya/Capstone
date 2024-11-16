@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is learning about list operations in Python and wants to practice adding new elements to a list. He starts with a list, my_list = [1, 2, 3, 4, 5], and decides to add the number 6 to the end of the list using the append() method."
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

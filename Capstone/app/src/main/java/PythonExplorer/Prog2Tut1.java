@@ -1,6 +1,5 @@
 package PythonExplorer;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,16 +13,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.capstone.DBHelper;
-import com.example.capstone.Example.E1example1;
 import com.example.capstone.Example.E2Example1;
-import com.example.capstone.Example.E2example15;
-import com.example.capstone.HomeActivity;
-import com.example.capstone.Python1Lesson15;
-import com.example.capstone.Python1Q1;
 import com.example.capstone.R;
 
 import java.util.Locale;
@@ -76,19 +69,20 @@ public class Prog2Tut1 extends AppCompatActivity {
             }
         });
         Button skip = findViewById(R.id.skipped);
-        if(ptsNumbers==0) {
-            skip.setEnabled(false);
-        }
-        else {
-            skip.setEnabled(true);
-            skip.setVisibility(View.GONE);
-        }
+        skip.setEnabled(true);
+        skip.setVisibility(View.VISIBLE);
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Prog2Tut1.this,E2Example1.class));
-                finish();
-                tts.stop();
+                if(ptsNumbers==45) {
+                    Show();
+
+                }else {
+                    startActivity(new Intent(Prog2Tut1.this, E2Example1.class));
+                    finish();
+                    tts.stop();
+                    tts.shutdown();
+                }
             }
         });
 
@@ -229,18 +223,12 @@ public class Prog2Tut1 extends AppCompatActivity {
     }
     public void animate(float animates){
         Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
+        img.setDuration(4000);
         img.setFillAfter(true);
 
         sir_kurt.startAnimation(img);
     }
-    public void animates(float animates){
-        Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
-        img.setFillAfter(true);
 
-        sir_kurt2.startAnimation(img);
-    }
     interface Typing{
         void onAnimationComplete();
     }

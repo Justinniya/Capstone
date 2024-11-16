@@ -72,9 +72,14 @@ public class Python1Lesson6 extends AppCompatActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Python1Lesson6.this,Python1Q6.class));
-                finish();
-                tts.stop();
+                if(newptsNumbers==15) {
+                    Show();
+                }else {
+                    startActivity(new Intent(Python1Lesson6.this, Python1Q6.class));
+                    finish();
+                    tts.stop();
+                    tts.shutdown();
+                }
             }
         });
 
@@ -141,7 +146,10 @@ public class Python1Lesson6 extends AppCompatActivity {
                 }
                 else if(numbers == 5){
                     if(newptsNumbers==15) {
-                        Show();
+                    Show();
+                }else{
+                    startActivity(new Intent(Python1Lesson6.this, Python1Q6.class));
+                    finish();
                     }
                 }
             }
@@ -207,6 +215,9 @@ public class Python1Lesson6 extends AppCompatActivity {
                 else if(numbers == 5){
                     if(newptsNumbers==15) {
                         Show();
+                    }else{
+                        startActivity(new Intent(Python1Lesson6.this, Python1Q6.class));
+                        finish();
                     }
                 }
             }
@@ -234,18 +245,12 @@ public class Python1Lesson6 extends AppCompatActivity {
     }
     public void animate(float animates){
         Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
+        img.setDuration(4000);
         img.setFillAfter(true);
 
         sir_kurt.startAnimation(img);
     }
-    public void animates(float animates){
-        Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
-        img.setFillAfter(true);
 
-        sir_kurt2.startAnimation(img);
-    }
     interface Typing{
         void onAnimationComplete();
     }
@@ -332,5 +337,6 @@ public class Python1Lesson6 extends AppCompatActivity {
         startActivity(new Intent(Python1Lesson6.this,Pactivity1.class));
         finish();
         tts.stop();
+        tts.shutdown();
     }
 }

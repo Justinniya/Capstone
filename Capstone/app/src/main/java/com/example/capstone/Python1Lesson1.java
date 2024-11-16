@@ -1,11 +1,7 @@
 package com.example.capstone;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
@@ -18,7 +14,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 import java.util.Set;
@@ -59,8 +56,7 @@ public class Python1Lesson1 extends AppCompatActivity {
         handler = new Handler();
         Locale local = new Locale("en","US");
 
-        tts = new TextToSpeech(getApplicationContext()
-                , new TextToSpeech.OnInitListener() {
+        tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int i) {
                 Set<Voice> voices = tts.getVoices();
@@ -72,7 +68,7 @@ public class Python1Lesson1 extends AppCompatActivity {
                     // Use the male voice
                     tts.setVoice(voicee);
                 }
-                }
+            }
         });
         skip = findViewById(R.id.skipped);
         if(OldPtsNumber==0) {
@@ -94,6 +90,7 @@ public class Python1Lesson1 extends AppCompatActivity {
                     startActivity(new Intent(Python1Lesson1.this, Python1Q1.class));
                     finish();
                     tts.stop();
+                    tts.shutdown();
                 }
             }
         });
@@ -264,6 +261,7 @@ public class Python1Lesson1 extends AppCompatActivity {
                 startActivity(new Intent(Python1Lesson1.this, Python1Q1.class));
                 finish();
                 tts.stop();
+                tts.shutdown();
                 newptsNumbers = 1;
                 sql.UpdatePoints((int) newptsNumbers, emaill);
                 dialogInterface.dismiss();
@@ -274,18 +272,12 @@ public class Python1Lesson1 extends AppCompatActivity {
     }
     public void animate(float animates){
         Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
+        img.setDuration(4000);
         img.setFillAfter(true);
 
         sir_kurt.startAnimation(img);
     }
-    public void animates(float animates){
-        Animation img = new TranslateAnimation(Animation.ABSOLUTE,animates,Animation.ABSOLUTE,Animation.ABSOLUTE);
-        img.setDuration(1000);
-        img.setFillAfter(true);
 
-        sir_kurt2.startAnimation(img);
-    }
     interface Typing{
         void onAnimationComplete();
     }
@@ -427,20 +419,23 @@ public class Python1Lesson1 extends AppCompatActivity {
         }
 
     }
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
+
     @Override
     public void onBackPressed() {
         startActivity(new Intent(Python1Lesson1.this,Pactivity1.class));
         finish();
         tts.stop();
+        tts.shutdown();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // Shutdown TTS engine to release resources
         if (tts != null) {
             tts.stop();
             tts.shutdown();

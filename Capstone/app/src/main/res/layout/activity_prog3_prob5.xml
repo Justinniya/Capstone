@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex creates a Dog class with a class variable for the number of legs, along with methods to change this variable and display information about the dog. After instantiating Dog with 'Buddy' (age 3) and 'Max' (age 5)"
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

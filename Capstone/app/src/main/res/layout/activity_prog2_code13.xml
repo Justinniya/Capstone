@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is exploring conditional statements in Python and wants to understand how nested if/else statements work. He has a variable x set to 10 and wants to evaluate its value against certain conditions."
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

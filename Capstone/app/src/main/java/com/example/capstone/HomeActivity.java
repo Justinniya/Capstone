@@ -1,9 +1,7 @@
 package com.example.capstone;
 
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -16,16 +14,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.capstone.Example.Others;
 
-import java.util.List;
-import java.util.Locale;
-import java.util.Objects;
 import java.util.Set;
 
 import PythonExpert.Pactivity3;
@@ -39,7 +33,7 @@ public class HomeActivity extends AppCompatActivity {
     long ptsNumber;
     String email,stage;
     int level;
-    TextToSpeech textToSpeech;
+    TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,30 +43,25 @@ public class HomeActivity extends AppCompatActivity {
         Display();
         Points();
         Level();
-        // Initialize the TextToSpeech engine
-        textToSpeech = new TextToSpeech(HomeActivity.this, new TextToSpeech.OnInitListener() {
+
+        tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
-            public void onInit(int status) {
-                if (status == TextToSpeech.SUCCESS) {
-                    // Get the list of available voices
-                    Set<Voice> voices = textToSpeech.getVoices();
+            public void onInit(int i) {
+                Set<Voice> voices = tts.getVoices();
 
-                    // Print information about each voice
-                    for (Voice voice : voices) {
-                        Log.d("Voice", String.valueOf(voice));
-                        Voice voicee = new Voice(voice.getName(), voice.getLocale(), 1, 1, false, null);
+                // Print information about each voice
+                for (Voice voice : voices) {
+                    Voice voicee = new Voice(voice.getName(), voice.getLocale(), 1, 1, false, null);
 
-                        // Use the male voice
-                        textToSpeech.setVoice(voicee);
-
-                        // Example usage
-                        //textToSpeech.speak("Hello, I am a male voice.", TextToSpeech.QUEUE_FLUSH, null, null);
-                    }
+                    // Use the male voice
+                    tts.setVoice(voicee);
                 }
             }
+
         });
 
-        //CardView profileCard = findViewById(R.id.profileCard);
+
+
         ImageView Practice = findViewById(R.id.PracticeLock);
         CardView practiceCard = findViewById(R.id.practiceCard);
         CardView javaCard = findViewById(R.id.javaCard);
@@ -82,39 +71,46 @@ public class HomeActivity extends AppCompatActivity {
         ImageView LockJava = findViewById(R.id.lockProg2);
         ImageView LockOOp = findViewById(R.id.lockOOP);
         TextView points = findViewById(R.id.LearnPts);
-        ImageView profileCard = findViewById(R.id.profileID);
-        TextView pts = findViewById(R.id.LearnPts);
+        TextView pts = findViewById(R.id.points);
         CardView other = findViewById(R.id.Others);
-        profileCard.setVisibility(View.GONE);
 
             DBHelper db = new DBHelper(this);
             sqls = db.getReadableDatabase();
+        String text = "Welcome Learner";
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
         if(ptsNumber > 0 && ptsNumber <= 44){
             Practice.setVisibility(View.GONE);
             LockJava.setVisibility(View.VISIBLE);
             LockOOp.setVisibility(View.VISIBLE);
             stage = "Starter";
             points.setText("Stage : "+stage);
+            pts.setText("Points : " +ptsNumber);
+            sql.Updatelevel(1,"sdad");
         }
         else if(ptsNumber > 44 && ptsNumber <= 89){
             Practice.setVisibility(View.GONE);
             LockJava.setVisibility(View.GONE);
             stage = "Explorer";
             points.setText("Stage : "+stage);
+            pts.setText("Points : " +ptsNumber);
             Stage[0] = true;
+            sql.Updatelevel(2,"sdad");
         }
         else if(ptsNumber > 89){
             Practice.setVisibility(View.GONE);
             LockJava.setVisibility(View.GONE);
             LockOOp.setVisibility(View.GONE);
             stage = "Expert";
+            pts.setText("Points : " +ptsNumber);
             points.setText("Stage : "+stage);
+            sql.Updatelevel(3,"sdad");
         }
         else{
             points.setText("New User");
             Practice.setVisibility(View.VISIBLE);
             LockJava.setVisibility(View.VISIBLE);
             LockOOp.setVisibility(View.VISIBLE);
+            pts.setText("Points : " +ptsNumber);
         }
 
 
@@ -122,12 +118,11 @@ public class HomeActivity extends AppCompatActivity {
         SwipeRefreshLayout swipeRefreshLayout = (SwipeRefreshLayout)findViewById(R.id.refreshLayout);
         swipeRefreshLayout.setOnRefreshListener(
                 new SwipeRefreshLayout.OnRefreshListener() {
-
-
                     @Override
                     public void onRefresh() {
                         Points();
                         Level();
+                        pts.setText("Points : " +ptsNumber);
                         if(ptsNumber > 0 && ptsNumber <= 44){
                             Practice.setVisibility(View.GONE);
                             LockJava.setVisibility(View.VISIBLE);
@@ -163,13 +158,7 @@ public class HomeActivity extends AppCompatActivity {
         other.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(HomeActivity.this,"Coming soon",Toast.LENGTH_LONG).show();
-            }
-        });
-        profileCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
+                startActivity(new Intent(HomeActivity.this, Others.class));
                 finish();
             }
         });
@@ -180,7 +169,7 @@ public class HomeActivity extends AppCompatActivity {
 
                         ProgressDialog progressDialog = new ProgressDialog(HomeActivity.this);
                         progressDialog.setMessage("Please wait...");
-                        progressDialog.setCancelable(false); // Prevent user from dismissing dialog
+                        progressDialog.setCancelable(false);
                         progressDialog.show();
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -191,7 +180,6 @@ public class HomeActivity extends AppCompatActivity {
                         }, 2000);
 
                 }
-            //}
         });
 
         javaCard.setOnClickListener(new View.OnClickListener() {
@@ -203,7 +191,7 @@ public class HomeActivity extends AppCompatActivity {
                 else {
                     ProgressDialog progressDialog = new ProgressDialog(HomeActivity.this);
                     progressDialog.setMessage("Please wait...");
-                    progressDialog.setCancelable(false); // Prevent user from dismissing dialog
+                    progressDialog.setCancelable(false);
                     progressDialog.show();
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -222,7 +210,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ProgressDialog progressDialog = new ProgressDialog(HomeActivity.this);
                 progressDialog.setMessage("Please wait...");
-                progressDialog.setCancelable(false); // Prevent user from dismissing dialog
+                progressDialog.setCancelable(false);
                 progressDialog.show();
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -242,7 +230,7 @@ public class HomeActivity extends AppCompatActivity {
                 if (ptsNumber >= 90) {
                     ProgressDialog progressDialog = new ProgressDialog(HomeActivity.this);
                     progressDialog.setMessage("Please wait...");
-                    progressDialog.setCancelable(false); // Prevent user from dismissing dialog
+                    progressDialog.setCancelable(false);
                     progressDialog.show();
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -264,7 +252,7 @@ public class HomeActivity extends AppCompatActivity {
                 // Handle click on the Settings card
                 ProgressDialog progressDialog = new ProgressDialog(HomeActivity.this);
                 progressDialog.setMessage("Please wait...");
-                progressDialog.setCancelable(false); // Prevent user from dismissing dialog
+                progressDialog.setCancelable(false);
                 progressDialog.show();
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -307,13 +295,6 @@ public class HomeActivity extends AppCompatActivity {
             cur.close();
         }
     }
-    public void hulat(int number){
-        try{
-            Thread.sleep(number);
-        }catch (Exception e){
-
-        }
-    }
 
     @Override
     public void onBackPressed() {
@@ -328,6 +309,17 @@ public class HomeActivity extends AppCompatActivity {
             back++;
         }
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+        }
+    }
 }//end of Program

@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="It's time for you to rewrite the code from example"
+                android:text="Alex is learning Python and has been asked to create a function that prints a specific message. The goal is to ensure that when the function is called, it displays 'This is a message from the function.' on the screen."
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

@@ -232,17 +232,10 @@ public class Prog2Code15 extends AppCompatActivity {
             public void onClick(View view) {
                 Python python = Python.getInstance();
                 PyObject Eout = python.getModule("script");
-                PyObject call = Eout.callAttr("main","global_var = 10\n" +
+                PyObject call = Eout.callAttr("main","square = lambda x: x**2\n" +
                         "\n" +
-                        "def my_function():\n" +
-                        "    # Local variable\n" +
-                        "    local_var = 20\n" +
-                        "    print(\"Inside the function:\")\n" +
-                        "    print(\"Local variable:\", local_var)\n" +
-                        "    print(\"Global variable:\", global_var)\n" +
-                        "\n" +
-                        "# Call the function\n" +
-                        "my_function()");
+                        "result = square(5)\n" +
+                        "print(\"Square of 5:\", result)\n");
                 PyObject module = python.getModule("script");
                 PyObject result = module.callAttr("main",textEditor.getText().toString());
                 String EOutput = call.toString();
@@ -250,12 +243,12 @@ public class Prog2Code15 extends AppCompatActivity {
 
 
                 if(Prob1R.equals(EOutput)) {
-                    if(ptsNumbers==2) {
+                    if(ptsNumbers==89) {
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code15.this, Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code15.this, Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
-                        PtsNumber = 3;
+                        PtsNumber = 90;
                         sql.UpdatePoints(PtsNumber, emaill);
                         intent.putExtra("outputText", compile)
                                 .putExtra("Correctt",cor);
@@ -265,7 +258,7 @@ public class Prog2Code15 extends AppCompatActivity {
 
                     }else{
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code15.this,Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code15.this,Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
                         intent.putExtra("outputText", compile)

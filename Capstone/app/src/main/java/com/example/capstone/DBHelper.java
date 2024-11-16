@@ -8,9 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class
 DBHelper extends SQLiteOpenHelper {
-    //HomeActivity home = new HomeActivity();
+
     String email;
-    //LoginActivity a = new LoginActivity();
+
     public static final String DBNAME = "registerss.db";
 
     public DBHelper( Context context) {
@@ -21,7 +21,7 @@ DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
         MyDB.execSQL("create Table users( fname TEXT , lname TEXT, email TEXT primary key, password TEXT, pn TEXT, date TEXT,Age int,Section Text,Year Text)");
-        MyDB.execSQL("create Table usersStage(Player_IGN TEXT PRIMARY KEY,email TEXT, pts INTEGER ,Level INTEGER, FOREIGN KEY(email) REFERENCES user(email) )");
+        MyDB.execSQL("create Table usersStage(email TEXT PRIMARY KEY, pts INTEGER ,Level INTEGER )");
     }
     @Override
     public void onUpgrade(SQLiteDatabase MyDB, int i, int i1) {
@@ -76,7 +76,7 @@ DBHelper extends SQLiteOpenHelper {
        ContentValues values = new ContentValues();
 
        //String eemail = a.getEmail();
-       values.put("pts",UpdatedPoints); 
+       values.put("pts",UpdatedPoints);
        String Where = "email = ? ";
        String[] args = {"XciteUser"};
        int Update = myDB.update("usersStage", values, Where,args);

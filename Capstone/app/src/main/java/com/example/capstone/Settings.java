@@ -4,10 +4,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.speech.tts.TextToSpeech;
 import android.view.MenuItem;
 import android.view.View;
-
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +22,7 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         db = new DBHelper(this);
         CardView reset = findViewById(R.id.RReset);
+        CardView aboutus = findViewById(R.id.aboutus1);
         androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -57,6 +57,14 @@ public class Settings extends AppCompatActivity {
 
             }
         });
+
+        aboutus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Settings.this, About_us.class));
+                finish();
+            }
+        });
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -66,5 +74,9 @@ public class Settings extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void exitApp(View view) {
+        Toast.makeText(this, "Exiting App...", Toast.LENGTH_SHORT).show();
+        finish();
     }
 }

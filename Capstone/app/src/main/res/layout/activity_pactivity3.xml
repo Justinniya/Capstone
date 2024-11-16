@@ -2,13 +2,13 @@
 <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/gradient0range"
-android:orientation="vertical"
+    android:orientation="vertical"
     android:id="@+id/refreshLayout"
-android:padding="10dp"
-tools:context="PythonExplorer.Pactivity2">
+    android:padding="10dp"
+    tools:context="PythonExplorer.Pactivity2">
 
 
 
@@ -330,7 +330,7 @@ tools:context="PythonExplorer.Pactivity2">
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="   Constuctor"
+                        android:text="   Constructor"
                         android:textAllCaps="true"
                         android:textColor="@color/green"
                         android:textSize="14sp"
@@ -428,7 +428,7 @@ tools:context="PythonExplorer.Pactivity2">
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="    Instance Methods:"
+                        android:text="    Instance Methods"
                         android:textAllCaps="true"
                         android:textColor="@color/green"
                         android:textSize="14sp"
@@ -820,7 +820,7 @@ tools:context="PythonExplorer.Pactivity2">
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="     Method Overriding"
+                        android:text="    Overriding"
                         android:textAllCaps="true"
                         android:textColor="@color/green"
                         android:textSize="14sp"

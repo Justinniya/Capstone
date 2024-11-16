@@ -41,10 +41,10 @@ public class Python1Q3 extends AppCompatActivity {
                 String Code = answer.getText().toString();
                 if(Code.equals("int(number)")){
                     Toast.makeText(Python1Q3.this, "Correct",Toast.LENGTH_LONG).show();
-                    if(ptsNumbers==1) {
+                    if(ptsNumbers==7) {
                         startActivity(new Intent(Python1Q3.this,Prog1Prob3.class));
                         finish();
-                        PtsNumber = 2;
+                        PtsNumber = 8;
                         sql.UpdatePoints(PtsNumber, emaill);
 
                     }else{

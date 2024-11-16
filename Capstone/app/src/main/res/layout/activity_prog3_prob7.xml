@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is designing a system to represent different animals, so he creates an abstract Animal class that requires subclasses to implement the speak method. After defining derived classes Dog and Cat, he instantiates them with the names 'Buddy' and 'Whiskers'"
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

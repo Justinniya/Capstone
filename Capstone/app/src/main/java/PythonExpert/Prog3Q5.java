@@ -40,17 +40,17 @@ public class Prog3Q5 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String Code = answer.getText().toString();
-                if(Code.equals("print")){
+                String Code = answer.getText().toString().toLowerCase();
+                if(Code.equals("class methods")){
                     Toast.makeText(Prog3Q5.this, "Correct",Toast.LENGTH_LONG).show();
-                    if(ptsNumbers==1) {
-                        startActivity(new Intent(Prog3Q5.this,Prog1Prob1.class));
+                    if(ptsNumbers==103) {
+                        startActivity(new Intent(Prog3Q5.this,Prog3Prob5.class));
                         finish();
-                        PtsNumber = 2;
+                        PtsNumber = 104;
                         sql.UpdatePoints(PtsNumber, emaill);
 
                     }else{
-                        startActivity(new Intent(Prog3Q5.this,Prog1Prob1.class));
+                        startActivity(new Intent(Prog3Q5.this,Prog3Prob5.class));
                         finish();
                     }
 

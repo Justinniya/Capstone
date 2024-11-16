@@ -234,10 +234,8 @@ public class Prog2Code4 extends AppCompatActivity {
                 PyObject Eout = python.getModule("script");
                 PyObject call = Eout.callAttr("main","text = \"Hello, World!\"\n" +
                         "\n" +
-                        "# Use the replace() method to replace a substring\n" +
                         "new_text = text.replace(\"World\", \"Python\")\n" +
                         "\n" +
-                        "# Print the modified string\n" +
                         "print(new_text)");
                 PyObject module = python.getModule("script");
                 PyObject result = module.callAttr("main",textEditor.getText().toString());
@@ -246,12 +244,12 @@ public class Prog2Code4 extends AppCompatActivity {
 
 
                 if(Prob1R.equals(EOutput)) {
-                    if(ptsNumbers==2) {
+                    if(ptsNumbers==56) {
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code4.this, Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code4.this, Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
-                        PtsNumber = 3;
+                        PtsNumber = 57;
                         sql.UpdatePoints(PtsNumber, emaill);
                         intent.putExtra("outputText", compile)
                                 .putExtra("Correctt",cor);
@@ -261,7 +259,7 @@ public class Prog2Code4 extends AppCompatActivity {
 
                     }else{
                         String compile = compileInput(Prob1R);
-                        Intent intent = new Intent(Prog2Code4.this,Problem_Output.class);
+                        Intent intent = new Intent(Prog2Code4.this,Problem_Output2.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
                         intent.putExtra("outputText", compile)

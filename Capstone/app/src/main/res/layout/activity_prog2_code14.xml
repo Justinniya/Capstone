@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is learning about variable scope in Python, specifically the difference between global and local variables. He defines a global variable global_var and a function called my_function() where he declares a local variable."
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

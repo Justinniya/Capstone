@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is exploring the concept of lambda functions in Python, which are small anonymous functions defined using the lambda keyword. He wants to create a simple function to calculate the square of a number. For this example, he decides to use the number 2."
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"

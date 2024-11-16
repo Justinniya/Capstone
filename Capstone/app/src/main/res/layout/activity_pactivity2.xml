@@ -1402,7 +1402,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="                   function scope and lifetime"
+                                android:text="        Global variable"
                                 android:textAllCaps="true"
                                 android:textColor="@color/green"
                                 android:textSize="14sp"

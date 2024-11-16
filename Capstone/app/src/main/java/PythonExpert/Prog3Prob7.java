@@ -261,12 +261,12 @@ public class Prog3Prob7 extends AppCompatActivity {int PtsNumber;
 
 
                 if(Prob1R.equals(EOutput)) {
-                    if(ptsNumbers==2) {
+                    if(ptsNumbers==110) {
                         String compile = compileInput(Prob1R);
                         Intent intent = new Intent(Prog3Prob7.this, Problem_Output.class);
                         String Coorect = "Correct";
                         String cor = compileInput(Coorect);
-                        PtsNumber = 3;
+                        PtsNumber = 111;
                         sql.UpdatePoints(PtsNumber, emaill);
                         intent.putExtra("outputText", compile)
                                 .putExtra("Correctt",cor);

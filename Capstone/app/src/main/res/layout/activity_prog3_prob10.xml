@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In a Python workshop, Alex is stuck. Guide them to print Hello, World! with the print function in Python.\n\nprint('Hello World')\n"
+                android:text="Alex is learning about encapsulation in Python, so he defines an Employee class with private attributes for name and salary, along with getter and setter methods to access and modify these attributes. After creating an instance of Employee with the name 'Alice' and a salary of 50000, he accesses and updates the name to 'Bob' and the salary to 60000"
                 android:textColor="@color/white"
                 android:background="@color/BackGround"
                 android:textSize="16sp"
