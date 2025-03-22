@@ -1,102 +1,60 @@
-"""
 import sys
-from os.path import dirname, join
-from com.chaquo.python import Python
+import threading
+import os
+import signal
+from io import StringIO
 
-def main(code):
-    file_dir = str(Python.getPlatform().getApplication().getFilesDir())
 
-    filename = join(dirname(file_dir), 'file.text')
 
-    try:
+
+stop_event = threading.Event()
+
+app_instance = None
+flask_thread = None
+
+def run_flask(app_code):
+    global app_instance
+    local_vars = {"__name__": "__main__"}
+    exec(app_code, local_vars)
+
+#     app_instance.run(host="0.0.0.0", port=5000, debug=True, use_reloader=True)
+#     if "app" in local_vars:
+#
+#     else:
+#         print("Error: No Flask app instance found.")
+
+
+def stop_flask():
+#     flask_thread.kill()
+#     flask_thread.join()
+#     flask_thread = None
+    pass
+
+def main(code, action="start"):
+    global flask_thread
+
+    if action == "stop":
+        return stop_flask()
+
+    if "Flask" in code:
+        buffer = StringIO()
         original_stdout = sys.stdout
-        sys.stdout = open(filename,'w',encoding = 'utf8',errors='ignore')
-        exec(code)
-        sys.stdout.close()
-        sys.stdout = original_stdout
-        output = open(filename ,'r').read()
+        sys.stdout = buffer
+        stop_event.clear()
+        flask_thread = threading.Thread(target=run_flask, args=(code,), daemon=True)
+        flask_thread.start()
+        return "Flask server started. Open http://127.0.0.1:5000/"
 
-    except Exception as e:
-        sys.stdout = original_stdout
-        output = e
-
-    return str(output) """
-
-"""import sys
-from io import StringIO
-from com.chaquo.python import Python
-
-def main(code):
-    # Create a string buffer to capture the output
     buffer = StringIO()
-    original_stdout = sys.stdout  # Save the original stdout
-    sys.stdout = buffer  # Redirect stdout to the buffer
+    original_stdout = sys.stdout
+    sys.stdout = buffer
 
     try:
-        # Execute the user-provided Python code
-        exec(code)
-        output = buffer.getvalue()  # Capture any printed output
+        exec(code, {"__name__": "__main__"})
+        output = buffer.getvalue()
     except Exception as e:
-        output = str(e)  # Capture any error message
+        output = str(e)
     finally:
-        sys.stdout = original_stdout  # Restore original stdout
+        sys.stdout = original_stdout
 
-    return output"""
-
-
-'''import sys
-from io import StringIO
-import threading
-
-def run_flask(app_code):
-    exec(app_code)
-
-def main(code):
-    if 'Flask' in code:
-        flask_thread = threading.Thread(target=run_flask, args=(code,))
-        flask_thread.start()
-        return "Flask server is running."
-    else:
-        buffer = StringIO()
-        original_stdout = sys.stdout  # Save the original stdout
-        sys.stdout = buffer  # Redirect stdout to the buffer
-
-        try:
-            exec(code)
-            output = buffer.getvalue()  # Capture any printed output
-        except Exception as e:
-            output = str(e)  # Capture any error message
-        finally:
-            sys.stdout = original_stdout  # Restore original stdout
-
-        return output'''
-
-import sys
-from io import StringIO
-import threading
-from flask import Flask
-
-def run_flask(app_code):
-    # Execute the Flask app code in this function
-    exec(app_code)  # This will run the Flask application code
-
-def main(code):
-    if 'Flask' in code:
-        # Start the Flask server in a separate thread
-        flask_thread = threading.Thread(target=run_flask, args=(code,))
-        flask_thread.start()  # Start the Flask server
-        return "Flask server is running in a separate thread."
-    else:
-        buffer = StringIO()
-        original_stdout = sys.stdout  # Save the original stdout
-        sys.stdout = buffer  # Redirect stdout to the buffer
-
-        try:
-            exec(code)  # Execute non-Flask code
-            output = buffer.getvalue()  # Capture any printed output
-        except Exception as e:
-            output = str(e)  # Capture any error message
-        finally:
-            sys.stdout = original_stdout  # Restore original stdout
-
-        return output
+    return output

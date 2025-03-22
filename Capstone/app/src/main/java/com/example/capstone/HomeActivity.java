@@ -1,5 +1,6 @@
 package com.example.capstone;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.database.Cursor;
@@ -8,25 +9,20 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.Voice;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import com.example.capstone.Example.Others;
-
 import java.util.Set;
-
 import PythonExpert.Pactivity3;
 import PythonExplorer.Pactivity2;
 
 public class HomeActivity extends AppCompatActivity {
-    public boolean Stage [] = {false,false};
+    public boolean[] Stage = {false,false};
     int back = 1;
     private DBHelper sql;
     SQLiteDatabase sqls;
@@ -35,6 +31,7 @@ public class HomeActivity extends AppCompatActivity {
     int level;
     TextToSpeech tts;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,7 +70,6 @@ public class HomeActivity extends AppCompatActivity {
         TextView points = findViewById(R.id.LearnPts);
         TextView pts = findViewById(R.id.points);
         CardView other = findViewById(R.id.Others);
-
             DBHelper db = new DBHelper(this);
             sqls = db.getReadableDatabase();
         String text = "Welcome Learner";
@@ -269,7 +265,7 @@ public class HomeActivity extends AppCompatActivity {
 
         if(cur != null){
             while(cur.moveToNext()){
-                email = cur.getString(0);
+                email = cur.getString(1);
             }
             cur.close();
         }
@@ -299,6 +295,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
+        super.onBackPressed();
         Toast.makeText(HomeActivity.this, "Click again to exit!", Toast.LENGTH_LONG).show();
         if(back == 2){
 

@@ -1,27 +1,16 @@
 package com.example.capstone;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.os.Bundle;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import com.chaquo.python.PyObject;
 import com.chaquo.python.Python;
-
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 public class Output extends AppCompatActivity {
-    private TextView outputTextView,out;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +19,7 @@ public class Output extends AppCompatActivity {
         androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        TextView outputTextView,out;
         out = findViewById(R.id.finish);
         outputTextView = findViewById(R.id.outputTextView);
 
@@ -38,7 +27,7 @@ public class Output extends AppCompatActivity {
         boolean flask = Boolean.parseBoolean(getIntent().getStringExtra("Flask"));
         outputTextView.setText(output);
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:5000/") // Use the actual device IP
+                .baseUrl("http://127.0.0.1:5000/") // Use the actual device IP
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -96,7 +85,11 @@ public class Output extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId()==android.R.id.home){
-            finish();
+                Python python = Python.getInstance();
+                PyObject module = python.getModule("script");
+                PyObject result = module.callAttr("main", "","stop");
+//                String output = result.toStToast.makeText(Output.this, output, Toast.LENGTH_SHORT).show();
+                finish();
         }
 
         return super.onOptionsItemSelected(item);

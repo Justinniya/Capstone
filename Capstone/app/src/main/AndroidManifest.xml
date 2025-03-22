@@ -16,9 +16,6 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="34">
         <activity
-            android:name=".Try"
-            android:exported="false" />
-        <activity
             android:name=".About_us"
             android:exported="false" />
         <activity
@@ -35,6 +32,9 @@
             android:exported="false" />
         <activity
             android:name=".Example.E2example13"
+            android:exported="false" />
+        <activity
+            android:name=".Example.E2example2"
             android:exported="false" />
         <activity
             android:name=".Example.E2example12"
@@ -552,9 +552,6 @@
         <activity
             android:name=".Pactivity1"
             android:exported="false" />
-        <activity
-            android:name=".HelpActivity"
-            android:exported="true" />
         <activity
             android:name=".PythonActivity"
             android:exported="true" />

@@ -89,7 +89,7 @@ public class Prog2Q10 extends AppCompatActivity {
         dialog.show();
     }
     public void Points(){
-        Cursor cur = sql.getAll();
+        Cursor cur = sql.getAllNotes();
 
         if(cur != null){
             while(cur.moveToNext()){

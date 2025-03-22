@@ -302,6 +302,7 @@ public class Prog2Tut2 extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         startActivity(new Intent(Prog2Tut2.this, Pactivity2.class));
         finish();
         tts.stop();

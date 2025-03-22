@@ -34,6 +34,7 @@ public class Prog2Q4 extends AppCompatActivity {
         EditText answer = findViewById(R.id.fill);
         Button submit = findViewById(R.id.Submit);
         sql = new DBHelper(this);
+        Points();
 
 
         submit.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +90,7 @@ public class Prog2Q4 extends AppCompatActivity {
         dialog.show();
     }
     public void Points(){
-        Cursor cur = sql.getAll();
+        Cursor cur = sql.getAllNotes();
 
         if(cur != null){
             while(cur.moveToNext()){

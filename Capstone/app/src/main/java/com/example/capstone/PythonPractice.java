@@ -199,15 +199,21 @@ public class PythonPractice extends AppCompatActivity {
         Run1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String ouut;
+                String code = textEditor.getText().toString();
                 Python python = Python.getInstance();
                 PyObject module = python.getModule("script");
-                PyObject result = module.callAttr("main",textEditor.getText().toString());
-                String ouut = result.toString();
+                PyObject result = module.callAttr("main",code,"start");
+                ouut = result.toString();
                 String compile = compileInput(ouut);
                 Intent intent = new Intent(PythonPractice.this,Output.class);
                 intent.putExtra("outputText", compile);
                 intent.putExtra("Flask","true");
+                Toast.makeText(PythonPractice.this, ouut, Toast.LENGTH_LONG).show();
+                code = null;
+                module.clear();
                 startActivity(intent);
+
                     }
         });
 }

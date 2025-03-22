@@ -274,7 +274,7 @@ public class PythonActivity extends AppCompatActivity {
                 SharedPreferences sharedPreferences = getSharedPreferences(PythonActivity.PREFS_NAME,0);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putBoolean("hasLoggedIn",true);
-                editor.commit();
+                editor.apply();
                 startActivity(new Intent(PythonActivity.this, HomeActivity.class));
                 dialogInterface.dismiss();
             }

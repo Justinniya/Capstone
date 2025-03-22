@@ -1,6 +1,7 @@
 package PythonExplorer;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
@@ -53,6 +54,7 @@ public class Prog2Tut4 extends AppCompatActivity {
         third = ("This method returns a new string with the replacements made, leaving the original string unchanged.");
         fourth = ("Example: sentence.replace(\"old\", \"new\").");
         handler = new Handler();
+        Points();
         Locale local = new Locale("en","US");
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
@@ -300,6 +302,17 @@ public class Prog2Tut4 extends AppCompatActivity {
                 }
             }
         }, delay);
+
+    }
+    public void Points(){
+        Cursor cur = sql.getAll();
+
+        if(cur != null){
+            while(cur.moveToNext()){
+                ptsNumbers = Long.parseLong(cur.getString(2));
+            }
+            cur.close();
+        }
 
     }
     @Override

@@ -21,7 +21,7 @@ DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
         MyDB.execSQL("create Table users( fname TEXT , lname TEXT, email TEXT primary key, password TEXT, pn TEXT, date TEXT,Age int,Section Text,Year Text)");
-        MyDB.execSQL("create Table usersStage(email TEXT PRIMARY KEY, pts INTEGER ,Level INTEGER )");
+        MyDB.execSQL("create Table usersStage(id INTEGER PRIMARY KEY,email TEXT, pts INTEGER ,Level INTEGER )");
     }
     @Override
     public void onUpgrade(SQLiteDatabase MyDB, int i, int i1) {
@@ -60,6 +60,7 @@ DBHelper extends SQLiteOpenHelper {
 
        SQLiteDatabase myDB = this.getWritableDatabase();
        ContentValues values = new ContentValues();
+       values.put("id",999);
        values.put("email",email);
        values.put("pts",0);
        values.put("LEVEL",1);
@@ -71,70 +72,29 @@ DBHelper extends SQLiteOpenHelper {
 
    }
 
-   public int UpdatePoints(long UpdatedPoints,String email){
-       SQLiteDatabase myDB = this.getWritableDatabase();
-       ContentValues values = new ContentValues();
-
-       //String eemail = a.getEmail();
-       values.put("pts",UpdatedPoints);
-       String Where = "email = ? ";
-       String[] args = {"XciteUser"};
-       int Update = myDB.update("usersStage", values, Where,args);
-       myDB.close();
-
-       return  Update;
+   public int UpdatePoints(long points,String email){
+       try (SQLiteDatabase myDB = this.getWritableDatabase()) {
+           ContentValues values = new ContentValues();
+           values.put("pts", points);
+           String Where = "email = ?";
+           String[] args = {"XciteUser"};
+           return myDB.update("usersStage", values, Where, args);
+       }
    }
     public int Updatelevel(int level,String email){
-        SQLiteDatabase myDB = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-
-        //String eemail = a.getEmail();
-        values.put("Level",level);
-        String Where = "email = ? ";
-        String[] args = {"XciteUser"};
-        int Update = myDB.update("usersStage", values, Where,args);
-        myDB.close();
-
-        return  Update;
-    }
-
-
-    public boolean checkEmail(String email) {
-        SQLiteDatabase myDB = this.getWritableDatabase();
-        Cursor cursor = myDB.rawQuery("select * from users where email = ?", new String[]{email});
-        if (cursor.getCount() > 0) {
-
-            return true;
+        try (SQLiteDatabase myDB = this.getWritableDatabase()) {
+            ContentValues values = new ContentValues();
+            values.put("Level", level);
+            String Where = "email = ?";
+            String[] args = {email};
+            return myDB.update("usersStage", values, Where, args);
         }
-        else return false;
-    }
-
-
-    public boolean checkEmailuser(String email, String password){
-        SQLiteDatabase myDB = this.getWritableDatabase();
-        Cursor cursor = myDB.rawQuery("select * from users where email = ? and password = ?", new String[]{email, password});
-        if (cursor.getCount() > 0) {
-            return true;
-        }
-        else return false;
-    }
-    public int Level(int Pointss,String email){
-        SQLiteDatabase myDB = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-
-        //String eemail = a.getEmail();
-        values.put("Level",Pointss);
-        String Where = "email = ? ";
-        String[] args = {"1.ui@phinmaed.com"};
-        int Update = myDB.update("usersStage", values, Where,args);
-        myDB.close();
-
-        return  Update;
     }
     void Reset(){
-        SQLiteDatabase myDB = this.getWritableDatabase();
-        String argss[] = {"XciteUser"};
-        myDB.delete("usersStage","email = ?",argss);
+        try (SQLiteDatabase myDB = this.getWritableDatabase()) {
+            String[] args = {"XciteUser"};
+            myDB.delete("usersStage", "email = ?", args);
+        }
     }
 
 }

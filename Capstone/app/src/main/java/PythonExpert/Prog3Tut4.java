@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
@@ -59,6 +60,7 @@ public class Prog3Tut4 extends AppCompatActivity {
         second = ("They are defined with the def keyword and take self as the first parameter,");
         third = ("Instance methods can access and modify instance variables, providing behavior specific to each instance.\n");
         handler = new Handler();
+        Points();
         Locale local = new Locale("en","US");
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
@@ -354,6 +356,18 @@ public class Prog3Tut4 extends AppCompatActivity {
 
         tts.setSpeechRate(0.7f);
         tts.speak(firsts,TextToSpeech.QUEUE_FLUSH,null);
+    }
+
+    public void Points(){
+        Cursor cur = sql.getAll();
+
+        if(cur != null){
+            while(cur.moveToNext()){
+                ptsNumbers = Long.parseLong(cur.getString(2));
+            }
+            cur.close();
+        }
+
     }
 
     @Override

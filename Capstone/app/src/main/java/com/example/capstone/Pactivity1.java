@@ -4,18 +4,14 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.IInterface;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
-import com.example.capstone.Example.E1example1;
 
 public class Pactivity1 extends AppCompatActivity {
 
@@ -1245,6 +1241,7 @@ public class Pactivity1 extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         startActivity(new Intent(Pactivity1.this, HomeActivity.class));
         finish();
     }
