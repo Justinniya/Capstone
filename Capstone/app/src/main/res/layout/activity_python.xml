@@ -20,7 +20,7 @@
             android:id="@+id/sir_kurt"
             android:layout_width="wrap_content"
             android:layout_height="294dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="350dp"
             android:src="@drawable/sir_kurt"
             android:layout_marginLeft="250dp"
             android:layout_marginBottom="250dp"/>

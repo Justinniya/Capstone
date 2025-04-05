@@ -23,18 +23,8 @@ import com.chaquo.python.android.AndroidPlatform;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import android.os.Bundle;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-import com.chaquo.python.PyObject;
-import com.chaquo.python.Python;
 public class PythonPractice extends AppCompatActivity {
 
     private EditText textEditor;
@@ -224,6 +214,7 @@ public class PythonPractice extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         startActivity(new Intent(PythonPractice.this, HomeActivity.class));
         finish();
     }
